@@ -1,0 +1,196 @@
+/* Apply these styles to both html and body */
+html,
+body {
+  width: 100%; /* Make sure the html and body take up the full width of the viewport */
+  height: 100%; /* Make sure the html and body take up the full height of the viewport */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+/* Apply these styles to all elements */
+* {
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  color: black; /* Set text color to black */
+  font-size: 1.05rem; /* Set base font size */
+  font-family: "Poppins", sans-serif; /* Set base font family */
+}
+
+/* Apply styles to the header element */
+.header {
+  height: 4rem; /* Set height of the header */
+  margin-top: 1.5rem; /* Add space above the header */
+  display: flex; /* Use flexbox layout */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  gap: 3rem; /* Add space between items */
+  margin-left: 16rem; /* Add space on the left side */
+  margin-right: 16rem; /* Add space on the right side */
+}
+
+/* Apply styles to all button elements */
+button {
+  border: none; /* Remove default border */
+  background-color: transparent; /* Remove default background color */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  font: inherit; /* Inherit font settings from parent */
+}
+
+/* Apply styles when a button is active (pressed) */
+button:active {
+  transform: none; /* Remove any transformation effects */
+  box-shadow: none; /* Remove any box-shadow effects */
+}
+
+/* Apply styles when a button is focused (clicked or tabbed into) */
+button:focus {
+  outline: none; /* Remove default outline */
+}
+
+/* Apply styles when a button is hovered over */
+button:hover {
+  transform: scale(1.2); /* Enlarge button slightly on hover */
+}
+
+/* Apply styles to all anchor (link) elements */
+a {
+  text-decoration: none; /* Remove underline from links */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+/* Apply styles to anchor elements when hovered */
+a:hover {
+  border-radius: 0.5rem; /* Add rounded corners */
+  padding: 0.2rem 1rem; /* Add padding around the text */
+  background-color: #000; /* Set background color to black */
+  color: white; /* Set text color to white */
+}
+
+/* Apply styles to specific navigation links */
+.nav--home,
+.nav--about,
+.nav--contact,
+.nav--login {
+  margin-right: 2.5rem; /* Add space to the right of each link */
+}
+
+/* Apply styles to the header title */
+.header--title {
+  font-size: 2rem; /* Set font size for the title */
+  font-family: "Lobster", cursive; /* Set specific font family for the title */
+  margin-right: auto; /* Push the title to the left */
+}
+
+/* Apply styles to the main content area */
+.main {
+  margin-left: 16rem; /* Add space on the left side */
+  margin-right: 16rem; /* Add space on the right side */
+  margin-top: 4rem; /* Add space above the main content */
+  margin-bottom: 4rem; /* Add space below the main content */
+  display: flex; /* Use flexbox layout */
+  gap: 4.9rem; /* Add space between items */
+}
+
+/* Apply styles to buttons within the main content area */
+.main--button {
+  background-color: black; /* Set background color to black */
+  color: white; /* Set text color to white */
+  border-radius: 0.5rem; /* Add rounded corners */
+  padding: 0.4rem 3rem; /* Add padding around the text */
+}
+
+/* Apply styles to the main content area elements with class 'main--1' */
+.main--1 {
+  position: relative; /* Set position to relative for positioning child elements */
+  display: inline-block; /* Display as inline-block */
+}
+
+/* Apply styles to the border element within 'main--1' */
+.main--border {
+  position: absolute; /* Position absolutely within the parent */
+  top: -1rem; /* Position 1rem above the top of the parent */
+  left: -1rem; /* Position 1rem to the left of the parent */
+  right: 1rem; /* Position 1rem to the right of the parent */
+  bottom: 1.2rem; /* Position 1.2rem below the bottom of the parent */
+  border: 0.2rem solid #000; /* Add a solid black border */
+  border-radius: 1rem; /* Add rounded corners */
+  pointer-events: none; /* Disable pointer events for this element */
+  z-index: -1; /* Place this element behind its siblings */
+}
+
+/* Apply styles to images within the main content area */
+.main--image {
+  width: 20rem; /* Set image width */
+  display: block; /* Display as a block-level element */
+  border-radius: 1rem; /* Add rounded corners */
+  transition: all 0.3s ease; /* Smooth transition for all changes */
+}
+
+/* Apply styles when the main image is hovered over */
+.main--image:hover {
+  transform: translate(-1rem, -1rem); /* Move image up and to the left */
+}
+
+/* Apply styles to the main content area elements with class 'main--title' */
+.main--title {
+  font-size: 2rem; /* Set font size for the title */
+}
+
+/* Apply styles to the main content area elements with class 'main--2' */
+.main--2 {
+  margin-top: -2rem; /* Move content up by 2rem */
+}
+
+/* Apply styles for screens smaller than 1280px */
+@media (max-width: 1280px) {
+  /* Apply styles to the header for small screens */
+  .header {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    margin: 1.5rem 0; /* Add space above and below the header */
+    height: auto; /* Adjust height automatically */
+    padding: 0; /* Remove padding */
+  }
+
+  /* Apply styles to the header title for small screens */
+  .header--title {
+    margin: 0; /* Remove margin */
+    text-align: center; /* Center text */
+  }
+
+  /* Apply styles to the navigation for small screens */
+  .nav {
+    display: flex; /* Use flexbox layout */
+    flex-direction: row; /* Arrange items in a row */
+    justify-content: center; /* Center items horizontally */
+    width: 100%; /* Make navigation full width */
+    margin-top: 0.1rem; /* Add space above the navigation */
+    margin-left: 2rem; /* Add space on the left side */
+  }
+
+  /* Apply styles to navigation links for small screens */
+  .nav--link {
+    margin: 0 0.1rem; /* Add small space between links */
+    padding: 0.5rem 1rem; /* Add padding around the links */
+  }
+
+  /* Apply styles to the main content area for small screens */
+  .main {
+    margin: 3rem 0rem; /* Add space around the main content */
+    margin-left: 1rem;
+    padding: 0 1rem; /* Add padding on the sides */
+    display: flex; /* Use flexbox layout */
+    flex-direction: column; /* Stack items vertically */
+    text-align: center; /* Center text */
+    align-items: center; /* Center items horizontally */
+    gap: 2rem; /* Add space between items */
+  }
+
+  /* Apply styles to buttons within the main content area for small screens */
+  .main--button {
+    margin-bottom: 2rem; /* Add space below the button */
+  }
+}
