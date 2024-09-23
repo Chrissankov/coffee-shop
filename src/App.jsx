@@ -1,12 +1,19 @@
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "../components/Header";
-import Main from "../components/Main";
+import HomePage from "../components/HomePage";
+import MenuPage from "../components/MenuPage";
 import "./App.css";
 
 export default function App() {
   return (
-    <div className="container">
+    <Router>
       <Header />
-      <Main />
-    </div>
+      <main>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/menu" element={<MenuPage />} />
+        </Routes>
+      </main>
+    </Router>
   );
 }

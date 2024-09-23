@@ -1,3 +1,4 @@
+/* HOME PAGE */
 /* Apply these styles to both html and body */
 html,
 body {
@@ -71,7 +72,7 @@ a:hover {
 
 /* Apply styles to specific navigation links */
 .nav--home,
-.nav--about,
+.nav--menu,
 .nav--contact,
 .nav--login {
   margin-right: 2.5rem; /* Add space to the right of each link */
@@ -192,5 +193,117 @@ a:hover {
   /* Apply styles to buttons within the main content area for small screens */
   .main--button {
     margin-bottom: 2rem; /* Add space below the button */
+  }
+}
+
+/* /////////////////////////////////////////////////////////////////////////////// */
+
+/* MENU WEBPAGE */
+
+/* Container for the entire menu with margins */
+.menu {
+  margin-left: 16rem; /* Add space on the left side */
+  margin-right: 16rem; /* Add space on the right side */
+  margin-top: 4rem; /* Add space above the main content */
+  margin-bottom: 4rem; /* Add space below the main content */
+}
+
+/* Title styling for the menu */
+.menu--title {
+  color: black; /* Set text color to black */
+  font-size: 1.7rem; /* Set base font size */
+}
+
+/* Grid layout for menu items */
+.menu--item {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+  grid-template-rows: repeat(2, auto); /* Create 2 rows with automatic height */
+  gap: 2rem; /* Space between grid items */
+}
+
+/* Individual item styling */
+.item {
+  background: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Set background color with transparency */
+  border-radius: 10px; /* Apply rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+/* Image styling for items */
+.item--image {
+  width: 100%; /* Make image full width of the item */
+  height: 12rem; /* Set a fixed height for the image */
+}
+
+/* Additional margin data for image and text */
+.item--imageMARGINdata {
+  margin-top: 0.8rem; /* Top margin */
+  margin-bottom: 0.6rem; /* Bottom margin */
+  margin-left: 0.4rem; /* Left margin */
+}
+
+/* Name styling for the item */
+.item--name {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+/* Calorie text styling */
+.item-calories {
+  font-size: 0.7rem; /* Set font size for calories */
+  color: #8d5943; /* Set text color */
+  margin-top: -0.2rem; /* Negative top margin for positioning */
+  margin-left: 0.125rem; /* Left margin */
+  margin-right: 0; /* No right margin */
+}
+
+/* Button styling */
+.item--button {
+  font-size: 0.8rem; /* Set button font size */
+  margin-left: 0; /* No left margin */
+  margin-right: auto; /* Push button to the left */
+  color: white; /* Set button text color */
+  background-color: #8d5943; /* Set button background color */
+  padding: 0.125rem 0.25rem; /* Add padding to the button */
+  border-radius: 0.2rem; /* Apply rounded corners */
+}
+
+/* Button hover effect */
+.item--button:hover {
+  transform: scale(1.07); /* Scale button up on hover */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+  /* Adjustments for medium screens */
+  .menu {
+    margin-left: 8rem; /* Reduce left margin */
+    margin-right: 8rem; /* Reduce right margin */
+  }
+
+  .menu--item {
+    grid-template-columns: repeat(2, 1fr); /* Change to 2 columns */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Adjustments for small screens */
+  .menu {
+    margin-left: 2rem; /* Further reduce left margin */
+    margin-right: 2rem; /* Further reduce right margin */
+  }
+
+  .menu--item {
+    grid-template-columns: 1fr; /* Change to 1 column */
+    grid-template-rows: auto; /* Adjust rows */
+  }
+
+  .item--image {
+    height: 10rem; /* Adjust image height */
   }
 }
